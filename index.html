@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="Jana Front-End Developer Portfolio">
+	<meta name="keywords" content="Frontend, Developer, Portfolio, Jana">
+	<meta name="author" content="Jana">
+	<link rel="stylesheet" href="./Font Awesome/fontawesome-free-7.1.0-web/fontawesome-free-7.1.0-web/css/all.min.css">
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="output.css">
+	<title>Jana's Portfolio</title>
+
+
+
+</head>
+
+<body class="bg-white text-gray-900 dark:bg-[#0f0f0f] dark:text-white transition-colors duration-500"
+	data-bs-theme="light">
+
+
+	<div id="loader" class="loader-container">
+		<div class="spinner"></div>
+		<div class="loader-text">Loading...</div>
+	</div>
+
+
+	<div class="fixed inset-0 -z-10">
+		<div class="absolute w-[500px] h-[500px] bg-red-500/20 blur-[120px] top-[-100px] left-[-100px]"></div>
+		<div class="absolute w-[400px] h-[400px] bg-red-400/10 blur-[100px] bottom-[-100px] right-[-100px]"></div>
+	</div>
+
+	<nav class="fixed top-5 left-1/2 -translate-x-1/2 z-[9999]
+w-[90%] max-w-[1100px] h-[70px]
+bg-white/70 dark:bg-white/5 
+backdrop-blur-xl
+border border-gray-200 dark:border-white/10
+rounded-full px-6
+flex items-center justify-between shadow-lg overflow-visible">
+
+		<div class="hidden lg:flex flex-1 justify-start gap-3">
+			<button class="nav-btn px-5 h-[45px] rounded-full 
+text-gray-700 dark:text-white/80 
+transition duration-300 relative"><a href="#hero">Home</a>
+
+			</button>
+			<button class="nav-btn px-5 h-[45px] rounded-full 
+text-gray-700 dark:text-white/80 
+transition duration-300 relative"><a href="#about">About</a></button>
+			<button class="nav-btn px-5 h-[45px] rounded-full 
+text-gray-700 dark:text-white/80 
+transition duration-300 relative"><a href="#Skills">Skills</a></button>
+		</div>
+
+
+		<div class="flex flex-col items-center flex-shrink-0 cursor-pointer">
+
+			<div
+				class="w-9 h-9 bg-[#DC2626] rounded-full flex items-center justify-center text-xs font-bold text-white">
+				JH
+			</div>
+			<span class="font-bold text-sm tracking-wide">JANA</span>
+		</div>
+
+
+		<div class="flex flex-1 justify-end items-center gap-3">
+
+
+			<div class="hidden lg:flex items-center gap-3">
+
+				<button onclick="scrollToSection('projects')" class="nav-btn px-5 h-[45px] rounded-full 
+		text-gray-700 dark:text-white/80 transition duration-300 relative">
+					<a href="#projects">Projects</a>
+				</button>
+
+				<button class="nav-btn px-5 h-[45px] rounded-full 
+		text-gray-700 dark:text-white/80 transition duration-300 relative" onclick="openContact()">
+					<a href="#contactBox">Contact</a>
+				</button>
+
+				<button id="darkBtn" class="w-10 h-10 flex items-center justify-center rounded-full 
+		bg-gray-200 dark:bg-white/10 hover:scale-110 transition">
+					🌙
+				</button>
+
+
+			</div>
+
+		</div>
+		<button id="menuBtn" class="lg:hidden ml-2 w-10 h-10 flex items-center justify-center
+rounded-full bg-gray-200 dark:bg-white/10
+text-gray-800 dark:text-white
+hover:scale-110 transition duration-300 shadow-md">
+			☰
+		</button>
+
+	</nav>
+	<div id="mobileMenu" class="lg:hidden fixed top-[90px] left-4 right-4
+w-auto
+bg-white/90 dark:bg-black/50
+backdrop-blur-xl
+border border-gray-200 dark:border-white/10
+rounded-2xl shadow-xl
+flex flex-col p-4 gap-2 w-100
+
+opacity-0 scale-95 pointer-events-none
+transition-all duration-300 z-[9999]">
+		<a href="#hero" class="px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10">Home</a>
+		<a href="#about" class="px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10">About</a>
+		<a href="#Skills" class="px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10">Skills</a>
+		<a href="#projects" class="px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10">Projects</a>
+		<a onclick="openContact()" href="#contactbox"
+			class="px-3 py-2 rounded-lg hover:bg-black/5 dark:hover:bg-white/10">Contact</a>
+
+	</div>
+
+	<section id="hero"
+		class="reveal group relative px-4 sm:px-6 w-full min-h-screen flex flex-col items-center justify-center overflow-hidden pt-[120px]">
+
+		<div class="text-center z-20 transition-all duration-300 group-hover:translate-y-[120px] group-hover:opacity-0">
+			<div class="mt-10 transition-all duration-300 group-hover:opacity-0">
+				<div
+					class="inline-flex px-5 py-2 rounded-full border border-[bg-black] text-[bg-black] text-sm font-medium bg-transparent">
+					Hello
+				</div>
+			</div>
+			<div class="text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mt-5">
+				I'm <span class="text-primary">Jana Elhussieny</span>,
+			</div>
+
+			<div class="text-2xl sm:text-4xl md:text-6xl lg:text-7xl font-semibold leading-tight mt-5">
+				Creative Front-End Developer
+			</div>
+
+		</div>
+
+		<div class="relative w-full max-w-[952px] aspect-[3/2] flex items-center justify-center group">
+
+
+			<div class="absolute bottom-0 z-0 w-[90%] max-w-[812px] aspect-[2/1] bg-primary rounded-t-full">
+			</div>
+
+			<div
+				class="absolute z-10 transition-all duration-500 opacity-0 scale-0 group-hover:opacity-100 group-hover:scale-105">
+				<img src="/Frame 68.svg" class="w-full object-contain" />
+			</div>
+
+			<div
+				class="absolute left-[-200px] top-10 -translate-y-1/2 opacity-1 translate-y-[60px] group-hover:opacity-100 group-hover:translate-y-[-50%] transition-all duration-700 text-right">
+				<div class="text-primary text-sm font-medium">
+					UI / UX Designer
+				</div>
+				<div class="text-gray-500 dark:text-gray-300 text-xs mt-1">
+					Clean & Modern Interfaces
+				</div>
+			</div>
+
+			<div
+				class="absolute right-[-200px] top-10 -translate-y-1/2 opacity-1 translate-y-[60px] group-hover:opacity-100 group-hover:translate-y-[-50%] transition-all duration-700 text-right">
+
+				<div class="text-primary text-5xl leading-none">
+					★★★★★
+				</div>
+
+				<div class="text-gray-500 dark:text-gray-300 text-2xl font-extrabold mt-2 leading-none">
+					2 Years
+				</div>
+
+				<div class="text-[#667085] text-sm mt-1 tracking-wide">
+					EXPERIENCE
+				</div>
+
+			</div>
+
+			<img src="./Screenshot_2026-03-30_212207-removebg-preview.png"
+				class="girl relative z-20 w-[70%] sm:w-[80%] md:w-full object-contain">
+
+		</div>
+
+		<div class="absolute bottom-6 z-50 w-full flex justify-center px-4">
+			<div
+				class="flex items-center justify-center gap-3 p-2 w-fit max-w-[380px] sm:max-w-[500px] md:max-w-[650px] lg:max-w-[800px] rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg">
+				<button onclick="goTop()"
+					class="flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-white font-medium text-lg w-[140px] sm:w-[200px] h-[50px] sm:h-[60px] hover:scale-105 transition">
+
+					Portfolio
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M7 17L17 7"></path>
+						<path d="M7 7h10v10"></path>
+					</svg>
+
+				</button>
+
+
+				<button onclick="goContact()"
+					class="flex items-center justify-center gap-2 px-6 py-3 rounded-full border border-white/40 text-white font-medium text-lg w-[140px] sm:w-[200px] h-[50px] sm:h-[60px] hover:bg-white/10 transition">
+					Contact
+
+					<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+						stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M7 17L17 7"></path>
+						<path d="M7 7h10v10"></path>
+					</svg>
+
+				</button>
+
+			</div>
+
+		</div>
+	</section>
+	<section class="section reveal min-h-screen py-20 px-6 bg-gradient-to-b to-[#0f0f1a]" id="about">
+
+		<div class="max-w-3xl mx-auto px-6">
+
+			<div class="text-center mb-10">
+
+				<p style="color: var(--muted); letter-spacing: .3em;" class="uppercase text-sm">
+					who i am
+				</p>
+
+				<h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center mb-14">
+					About Me
+				</h2>
+
+				<div style="background: var(--primary);" class="w-12 h-[2px] mx-auto mt-4 rounded-full"></div>
+
+			</div>
+
+			<p style="color: var(--muted);" class="text-center leading-relaxed mb-10">
+				I’m a Front-End Developer focused on building clean,
+				responsive and modern websites using HTML, CSS, JavaScript.
+			</p>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+				<div class="p-4 rounded-xl text-center"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: var(--muted);">Name</div>
+					<div class="font-medium mt-1">Jana Elhussieny</div>
+
+				</div>
+
+				<div class="p-4 rounded-xl text-center"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: var(--muted);">Age</div>
+					<div class="font-medium mt-1">17</div>
+
+				</div>
+
+				<div class="p-4 rounded-xl text-center"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: var(--muted);">Location</div>
+					<div class="font-medium mt-1">Egypt</div>
+
+				</div>
+
+				<div class="p-4 rounded-xl text-center"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: var(--muted);">Speciality</div>
+					<div class="font-medium mt-1">Front-End</div>
+
+				</div>
+
+				<div class="p-4 rounded-xl text-center"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: var(--muted);">Email</div>
+					<div class="font-medium mt-1">janahussein874@gmail.com</div>
+
+				</div>
+
+				<div class="p-4 rounded-xl text-center info-card"
+					style="background: var(--card); border: 1px solid var(--border);">
+
+					<div style="color: #22c55e;">Status</div>
+					<div class="font-medium mt-1" style="color: var(--text);">Freelance</div>
+
+				</div>
+
+			</div>
+			<div class="flex justify-center gap-6 mt-10">
+
+
+
+				<a href="https://www.linkedin.com/in/your-username/" target="_blank"
+					class="text-xl text-blue-500 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-brands fa-linkedin"></i>
+				</a>
+
+
+				<a href="https://github.com/janaelhusseiny874-blip" target="_blank"
+					class="text-xl text-gray-300 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-brands fa-github"></i>
+				</a>
+
+				<a href="https://wa.me/20101069869439" target="_blank"
+					class="text-xl text-green-400 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-brands fa-whatsapp"></i>
+				</a>
+
+				<a href="https://www.facebook.com/your-username" target="_blank"
+					class="text-xl text-blue-600 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-brands fa-facebook" style="color: rgb(8, 102, 255);"></i>
+				</a>
+
+				<a href="https://www.instagram.com/your-username" target="_blank"
+					class="text-xl text-pink-500 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-brands fa-instagram" style="color: rgb(255, 0, 191);"></i>
+				</a>
+
+				<a href="tel:+20101069869439"
+					class="text-xl text-gray-400 transition duration-300 hover:scale-125 hover:-translate-y-1">
+					<i class="fa-solid fa-phone" style="color: rgb(8, 102, 255);"></i>
+				</a>
+
+			</div>
+
+		</div>
+
+	</section>
+
+
+
+	<section id="Skills"
+		class="min-h-screen py-20 px-6 bg-gradient-to-b to-[#0f0f1a] text-black dark:text-white flex items-center justify-center px-6 py-20">
+
+		<div class="w-full max-w-5xl">
+
+			<h2 class="text-5xl font-extrabold text-center mb-14 tracking-wide">
+				My Skills
+			</h2>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="90">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>HTML</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="85">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>CSS</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="70">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>JavaScript</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="80">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>Tailwind</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="80">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>Bootstrap</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+				<div class="skill p-6 rounded-2xl bg-gray-100 dark:bg-[#121212] shadow-md hover:scale-[1.02] transition duration-300"
+					data-value="65">
+					<div class="flex justify-between mb-3 text-sm font-medium">
+						<span>WordPress</span>
+						<span class="percent">0%</span>
+					</div>
+					<div class="h-2 bg-gray-300 dark:bg-gray-800 rounded-full overflow-hidden">
+						<div class="bar h-full bg-red-500 w-0 transition-all duration-1000"></div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
+
+	<section id="projects" class="reveal min-h-screen py-20 px-6 bg-gradient-to-b to-[#0f0f1a]">
+		<div class="max-w-6xl mx-auto">
+
+			<h1 class="text-4xl font-bold text-center mb-12">My Projects</h1>
+			<p class="text-gray-400 text-sm mb-4">
+				A modern responsive web application with smooth animations
+				and clean user interface design.
+			</p>
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+				<div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden 
+                    backdrop-blur-lg transition duration-500 hover:scale-105 hover:shadow-primary/10 shadow-lg">
+					<div class="h-48 overflow-hidden">
+						<img src="https://picsum.photos/500/300"
+							class="w-full h-full object-cover hover:scale-110 transition duration-500">
+					</div>
+					<div class="p-5">
+						<h2 class="text-lg font-semibold mb-2">Chat App</h2>
+						<p class="text-gray-400 text-sm mb-4">
+							Real-time chat with clean UI and smooth UX.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">HTML</span>
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Tailwind</span>
+						</div>
+						<div class="flex justify-between items-center">
+							<button
+								class="text-sm border border-white/20 px-4 py-2 rounded-lg hover:border-primary/100 transition">
+								Details
+							</button>
+							<a href="#"
+								class="text-white text-sm bg-gradient-to-r from-red-600 to-red-500 px-4 py-2 rounded-lg hover:opacity-90 transition">
+								Live Demo
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden 
+                    backdrop-blur-lg transition duration-500 hover:scale-105 hover:shadow-primary/10 shadow-lg">
+					<div class="h-48 overflow-hidden">
+						<img src="https://picsum.photos/501/300"
+							class="w-full h-full object-cover hover:scale-110 transition duration-500">
+					</div>
+					<div class="p-5">
+						<h2 class="text-lg font-semibold mb-2">Portfolio Site</h2>
+						<p class="text-gray-400 text-sm mb-4">
+							Showcase projects with modern responsive design.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">HTML</span>
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">CSS</span>
+						</div>
+						<div class="flex justify-between items-center">
+							<button
+								class="text-sm border border-white/20 px-4 py-2 rounded-lg hover:border-primary/100 transition">
+								Details
+							</button>
+							<a href="#"
+								class="text-white text-sm bg-gradient-to-r from-primary to-red-500 px-4 py-2 rounded-lg hover:opacity-90 transition">
+								Live Demo
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white/5 border border-white/10 rounded-2xl overflow-hidden 
+                    backdrop-blur-lg transition duration-500 hover:scale-105 hover:shadow-primary/10 shadow-lg">
+					<div class="h-48 overflow-hidden">
+						<img src="https://picsum.photos/502/300"
+							class="w-full h-full object-cover hover:scale-110 transition duration-500">
+					</div>
+					<div class="p-5">
+						<h2 class="text-lg font-semibold mb-2">E-commerce App</h2>
+						<p class="text-gray-400 text-sm mb-4">
+							Online store with smooth shopping experience.
+						</p>
+						<div class="flex flex-wrap gap-2 mb-4">
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">React</span>
+							<span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-xs">Tailwind</span>
+						</div>
+						<div class="flex justify-between items-center">
+							<button
+								class="text-sm border border-white/20 px-4 py-2 rounded-lg hover:border-primary/100 transition">
+								Details
+							</button>
+							<a href="#"
+								class="text-white bg-gradient-to-r from-primary to-red-500 px-4 py-2 rounded-lg hover:opacity-90 transition">
+								Live Demo
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div class="mt-12 text-center">
+				<a href="projects.html"
+					class="inline-block text-white bg-gradient-to-r from-primary to-red-500 px-8 py-3 rounded-xl font-semibold text-lg hover:opacity-90 transition">
+					All Projects
+				</a>
+			</div>
+
+		</div>
+	</section>
+	<div id="contactBox" class="hidden fixed inset-0 z-50 flex items-center justify-center
+bg-black/60 backdrop-blur-sm transition">
+
+		<div class="relative w-[95%] sm:w-[90%] max-w-[420px]
+	bg-white/10 backdrop-blur-xl
+	border border-white/20
+	rounded-2xl p-6 text-white
+	shadow-2xl animate-[fadeIn_.3s_ease]">
+
+			<button onclick="closeContact()"
+				class="absolute top-3 right-3 text-white text-xl hover:scale-110 transition">
+				✖
+			</button>
+
+			<h2 class="text-2xl font-bold text-center mb-5 text-primary">
+				Contact Me
+			</h2>
+
+			<form id="contactForm" class="space-y-3">
+
+				<input id="name" type="text" placeholder="Your Name"
+					class="w-full p-3 rounded-lg bg-white/10 outline-none border border-white/10 focus:border-primary">
+
+				<p id="nameError" class="text-red-400 text-sm mt-1 hidden"></p>
+
+				<input id="email" type="email" placeholder="Your Email"
+					class="w-full p-3 rounded-lg bg-white/10 outline-none border border-white/10 focus:border-primary">
+
+				<p id="emailError" class="text-red-400 text-sm mt-1 hidden"></p>
+
+				<textarea id="message" placeholder="Your Message"
+					class="w-full p-3 h-28 rounded-lg bg-white/10 outline-none border border-white/10 focus:border-primary"></textarea>
+
+				<p id="messageError" class="text-red-400 text-sm mt-1 hidden"></p>
+				<button type="submit"
+					class="w-full bg-primary hover:bg-red-600 py-3 rounded-lg font-semibold transition">
+					Send Message
+				</button>
+
+			</form>
+		</div>
+	</div>
+
+	<footer
+		class="py-14 px-6 md:px-20 bg-white text-gray-900 dark:bg-[#0b0b0b] dark:text-white transition-colors duration-500">
+
+		<div class="max-w-7xl mx-auto">
+
+			<div class="flex justify-between items-center flex-wrap gap-6">
+
+				<h2 class="text-3xl md:text-4xl font-bold leading-snug">
+					Let’s Build Something Amazing Together
+				</h2>
+
+				<button class="bg-primary hover:opacity-90 px-6 py-3 rounded-full font-semibold transition text-white">
+					<a onclick="openContact()" href="#contactbox">Hire Me </a>
+				</button>
+
+			</div>
+
+			<hr class="my-10 border-gray-200 dark:border-gray-800">
+
+
+			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+
+				<div>
+
+					<div class="flex items-center gap-3 mb-5">
+						<span
+							class="bg-primary text-white w-10 h-10 flex items-center justify-center rounded-full font-bold">
+							JH
+						</span>
+						<h3 class="font-semibold text-xl">Jana</h3>
+					</div>
+
+					<p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-5">
+						I’m a front-end developer passionate about building modern, responsive and beautiful websites.
+					</p>
+
+					<div class="flex gap-3 text-sm">
+
+						<a href="https://www.linkedin.com/in/your-username/" target="_blank"
+							class="text-xl text-blue-500 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-brands fa-linkedin"></i>
+						</a>
+
+						<a href="https://github.com/janaelhusseiny874-blip" target="_blank"
+							class="text-xl text-gray-300 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-brands fa-github"></i>
+						</a>
+
+						<a href="https://wa.me/20101069869439" target="_blank"
+							class="text-xl text-green-400 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-brands fa-whatsapp"></i>
+						</a>
+
+						<a href="https://www.facebook.com/your-username" target="_blank"
+							class="text-xl text-blue-600 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-brands fa-facebook" style="color: rgb(8, 102, 255);"></i>
+						</a>
+
+						<a href="https://www.instagram.com/your-username" target="_blank"
+							class="text-xl text-pink-500 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-brands fa-instagram" style="color: rgb(255, 0, 191);"></i>
+						</a>
+
+						<a href="tel:+20101069869439"
+							class="text-xl text-gray-400 transition duration-300 hover:scale-125 hover:-translate-y-1">
+							<i class="fa-solid fa-phone" style="color: rgb(8, 102, 255);"></i>
+						</a>
+
+					</div>
+
+				</div>
+
+				<div>
+					<h4 class="text-primary font-semibold mb-4">Navigation</h4>
+
+					<ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
+
+						<li class="hover:text-primary cursor-pointer transition"><a href="#hero">Home</a></li>
+						<li class="hover:text-primary cursor-pointer transition"><a href="#about">About</a></li>
+						<li class="hover:text-primary cursor-pointer transition"><a href="#Skills">Skills</a></li>
+
+						<li class="hover:text-primary cursor-pointer transition"><a href=""><a
+									href="#projects">Projects</a></a></li>
+						<li class="hover:text-primary cursor-pointer transition"><a href="#contactBox">Contact</a></li>
+
+					</ul>
+				</div>
+				<div>
+					<h4 class="text-primary font-semibold mb-4">Contact</h4>
+
+					<p class="text-sm text-gray-600 dark:text-gray-400 mb-2">01069869439</p>
+					<p class="text-sm text-gray-600 dark:text-gray-400 mb-2">01152551736</p>
+					<p class="text-sm text-gray-600 dark:text-gray-400">janahussein8gmail874.com@</p>
+					<p class="text-sm text-gray-600 dark:text-gray-400">janaelhussein8gmaily874.com@</p>
+				</div>
+				<div>
+					<h4 class="text-primary font-semibold mb-4">Get Updates</h4>
+
+					<div class="flex rounded-full overflow-hidden border border-gray-200 dark:border-gray-800">
+
+						<input id="emailInput" type="email" placeholder="Enter your email"
+							class="bg-transparent px-4 py-2 w-full text-sm outline-none text-gray-900 dark:text-white">
+
+						<button class="bg-primary px-5 py-2 text-white hover:opacity-90 transition"
+							onclick="validateEmail()">
+							Send
+						</button>
+					</div>
+
+					<p id="emailMessage" class="text-sm mt-2"></p>
+
+				</div>
+
+			</div>
+
+			<hr class="my-10 border-gray-200 dark:border-gray-800">
+			<div class="flex justify-between flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-500">
+
+				<p>Copyright © 2026 Jana. All Rights Reserved.</p>
+				<span class="hover:text-primary cursor-pointer transition">Privacy Policy</span>
+
+			</div>
+
+		</div>
+	</footer>
+	<button id="topBtn" class="fixed bottom-6 right-6 z-[9999]
+bg-red-500 text-white p-3 rounded-full shadow-lg
+transition-all duration-300 opacity-0 scale-75">
+		↑
+	</button>
+
+	<script src="script.js"></script>
+</body>
+
+</html>
